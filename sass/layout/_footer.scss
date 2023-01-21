@@ -1,0 +1,57 @@
+
+.white-link:link,
+.white-link:visited {
+    color: var(--link-water-white);
+}
+
+
+.footer {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+
+
+    @include respond-to(medium) {
+        padding-block: 2.7rem;
+    }
+
+    &__nav-list {
+        gap: 1.8rem;
+        margin-top: 2.5rem;
+
+        @include respond-to(medium) {
+            margin-left: 4rem;
+            margin-top: 0;
+            gap: 4rem;
+        }
+    }
+
+    &__socials {
+        gap: 2.4rem;
+        margin-top: 3.5rem;
+
+        @include respond-to(medium) {
+            margin-top: 0;
+        }
+
+        a:hover svg path,
+        a:focus-visible svg path {
+            fill: var(--charm-pink);
+            transition: fill 200ms ease-in-out;
+        }
+    }
+
+
+    &::before {
+        width: 78rem;
+        height: 78rem;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -604px;
+
+
+        @include respond-to(medium) {
+            top: -136px;
+            left: 100%;
+        }
+    }
+}
